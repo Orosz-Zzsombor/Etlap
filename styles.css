@@ -1,0 +1,54 @@
+body{
+  background-image: url(background.jpg);
+  margin: 0px;
+}
+
+.fejlec h1 {
+  font-size: 4rem;
+  color:white;
+  text-align: center;
+  
+}
+.topnav {
+    background-color: rgb(31, 30, 30);
+    overflow: hidden;
+    height: 4rem;
+
+  }
+  
+
+  .topnav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 26px;
+    text-decoration: none;
+    font-size: 26px;
+    height: 4rem;
+  }
+  
+  
+  .topnav a:hover {
+    background-color: rgb(33, 143, 23);
+    color: black;
+  }
+  
+ 
+  .topnav a.split {
+    float: right;
+    background-color: #0d7513;
+    color: white;
+  }
+  
+  .center{
+    height: 60rem;
+    margin-top:70rem;
+    width: 100%;
+    background-color:white;
+  }
+ 
+
+  footer{
+    height: 10rem;
+    background-color:gray;
+  }
