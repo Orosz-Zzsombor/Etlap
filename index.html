@@ -5,36 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
     <title>Étterem</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
+    <script src="java.js"></script>
 
-        function myFunction(){
-            var element = document.getElementsByClassName(header);
-            element.classList.toggle("darkmode");
-        }
-    </script>
+
 </head>
 
-    <body>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">UP</button>
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <div class="header">
         <div class="navbar">
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <button onclick="myFunction()">DarkMode</button>
-        
+            <a id="first_nav_element" href="#"><span>Taste</span>.it</a>
+            <a href="#">Térkép</a>
+            <a href="#">Elérhetőségek</a>
+            <a href="#">Rólunk</a>
+
+            <a><i class="fa fa-shopping-cart" style="font-size:20px"></i></a>
+            <a><i class="fa fa-moon-o" style="font-size:24px"></i></a>
+            <a><i class="fa fa-search" style="font-size:20px"></i></a><input type="text" class="kereso" name="search"
+                placeholder="Keresés..">
+
         </div>
 
-        <div class="header darkmode">
-            <img class="logo" src="logo.png">
-            <h1>Étterem</h1>
-        </div>
+        <br>
+        <img class="logo" src="logo.png">
+        <h1>Étterem</h1>
+
+    </div>
 
 
 
-        <div class="row">
-            <div class="oldal">
+    <div class="row">
+        <div class="oldal">
             <div id="eloetel">
+
                 <p>Előétel</p>
             </div>
             <div id="foetel">
@@ -43,111 +69,220 @@
             <div id="desszert">
                 <p>Desszert</p>
             </div>
+
+        </div>
+
+        <div class="main">
+
+            <div class="sor_1">
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
             </div>
-    
-            <div class="main">
-                <div class="sor_1">
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
+
+
+            <div class="sor_2">
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+            </div>
+
+
+            <div class="sor_3">
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+                <div class="oszlop">
+                    <img src="leves1.jpg">
+                    <button class="button">Kosárba</button>
+                </div>
+                <div class="oszlop">
+                    <p>1400FT</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="napi_menu">
+
+        <h2 style="text-align:center">Napi Menük</h2>
+        <div class="row2">
+            <div class="column">
+                <div class="card">
+                    <img src="menukaja1.jpg" style="width:100%">
+                    <div class="container">
+                        <h2>Menü|1</h2>
+                        <p class="title_card">1200FT</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates ipsum enim culpa
+                            nulla est nihil aliquid veniam, aut reprehenderit, adipisci minus, unde ducimus sed! Aut,
+                            quam impedit! Vel, culpa. .</p>
+                        <p>stigibalint@gmail.com</p>
+                        <p><button class="button">Kosárba</button></p>
                     </div>
                 </div>
-                
+            </div>
 
-                <div class="sor_2">
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
+            <div class="column">
+                <div class="card">
+                    <img src="menukaja1.jpg" style="width:100%">
+                    <div class="container">
+                        <h2>Menü|2</h2>
+                        <p class="title_card">1600FT</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates ipsum enim culpa
+                            nulla est nihil aliquid veniam, aut reprehenderit, adipisci minus, unde ducimus sed! Aut,
+                            quam impedit! Vel, culpa. </p>
+                        <p>stigibalint@gmail.com</p>
+                        <p><button class="button">Kosárba</button></p>
                     </div>
                 </div>
+            </div>
 
-
-                <div class="sor_3">
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
-                    </div>
-                    <div class="oszlop">
-                        <p>1400FT</p>
-                    </div>
-                    <div class="oszlop">
-                        <img src="leves1.jpg">
+            <div class="column">
+                <div class="card">
+                    <img src="menukaja1.jpg" style="width:100%">
+                    <div class="container">
+                        <h2>Menü|3</h2>
+                        <p class="title_card">1900FT</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates ipsum enim culpa
+                            nulla est nihil aliquid veniam, aut reprehenderit, adipisci minus, unde ducimus sed! Aut,
+                            quam impedit! Vel, culpa. .</p>
+                        <p>stigibalint@gmail.com</p>
+                        <p><button class="button">Kosárba</button></p>
                     </div>
                 </div>
-
-
-       </div>
+            </div>
         </div>
 
-        <div class="footer">
-            <h2>Footer</h2>
-        </div>
+        </p>
 
-    </body>
+    </div>
+
+
+
+    <footer>
+
+        <div>
+            <h2 class="footer_headline">Navigation</h2>
+            <ul class="footer_list">
+                <li>nav 1</li>
+                <li>nav 2</li>
+                <li>nav 3</li>
+                <li>nav 4</li>
+                <li>nav 5</li>
+                <li>nav 6</li>
+                <li>nav 7</li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="footer_headline">Follow Us</h2>
+            <ul class="footer_list">
+                <li>social 1 </li>
+                <li>social 2</li>
+                <li>social 3</li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="footer_headline">Contact</h2>
+            <ul class="footer_list">
+                <li>Adress</li>
+                <li>Phone</li>
+                <li>Email</li>
+                <li>Website</li>
+            </ul>
+        </div>
+    </footer>
+</body>
 
 </html>
-
-
