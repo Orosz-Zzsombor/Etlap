@@ -157,6 +157,11 @@ span {
 
 .logo {
   width: 13%;
+  transition: transform .5s;
+}
+
+.logo:hover{
+  transform: scale(1.2);
 }
 
 
