@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="terkep.css">
+    <script src="java.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Terkep</title>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">UP</button>
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        function myFunction2() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+            function focusFunction(id) {
+            document.getElementById(id).style.border = "5px solid rgb(243, 228, 17)";
+        }
+
+            function blurFunction(id) {
+                document.getElementById(id).style.border = "0px";
+        }
+
+
+        function swipe(id) {
+        var largeImage = document.getElementById(id);
+        var url=largeImage.getAttribute('src');
+        window.open(url,'Image','width=largeImage.stylewidth,height=largeImage.style.height,resizable=1');
+        
+}
+    </script>
+
+    <div class="header">
+        <div class="topnav" id="myTopnav">
+            <a href="#home"><span id="taste_it">TASTE.</span>IT</a>
+            <a href="index.html">Kezdőlap</a>
+            <a href="terkep.html">Térkép</a>
+            <a href="#elerhetoseg">Elérhetőségek</a>
+            <a href="kapcsolat.html">Kapcsolat</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <h1>Térkép</h1>
+        <div class="flex-container">
+            <div class="flex-child mapouter">
+                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" title="terkep"
+                        src="https://maps.google.com/maps?q=hiroshima&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                        scrolling="no" marginheight="" marginwidth="0"></iframe>
+                </div>
+            </div>
+            <div class="flex-child" style="overflow-x:auto;">
+                <table>
+                    <tr>
+                      <th colspan="2">Nyitvatartás</th>
+
+
+                    </tr>
+                    <tr>
+                         <td>Hétfő:</td>
+                         <td>11:00-15:00</td>
+                    </tr>
+                    <tr>
+                        <td>Kedd:</td>
+                        <td>11:00-15:00</td>
+                    </tr>
+                    <tr>
+                        <td>Szerda:</td>
+                        <td>11:00-15:00</td>
+                    </tr>
+                    <tr>
+                        <td>Csütörtök:</td>
+                        <td>11:00-15:00</td>
+                    </tr>
+                    <tr>
+                        <td>Péntek:</td>
+                        <td>11:00-15:00</td>
+                    </tr>
+                    <tr>
+                        <td>Szombat:</td>
+                        <td>11:00-15:00</td>
+                    </tr>
+                    <tr>
+                        <td>Vasárnap:</td>
+                        <td>11:00-15:00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a href="asztal.html"><button>Asztalfoglalás</button></a></td>
+
+                    </tr>
+                  </table>
+
+            </div>
+                
+        </div>
+        
+
+    </div>
+    <footer class="footer">
+        <div class="footer_addr">
+        
+              
+          <h2>Contact</h2>
+          
+          <address>
+            5534 Somewhere In. The World 22193-10212<br>
+                
+            <a class="footer_btn" href="kapcsolat.html" id="elerhetoseg">Lépj velünk kapcsolatba</a>
+          </address>
+        </div>
+        
+        <ul class="footer_nav">
+          <li class="nav_item">
+            <h2 class="nav_title" >Media</h2>
+      
+            <ul class="nav_ul">
+              <li>
+                <a >Facebook</a>
+              </li>
+      
+              <li>
+                <a >Instragram</a>
+              </li>
+                  
+              <li>
+                <a>Twitter</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav_item nav_item--extra">
+            <h2 class="nav_title">Partnerek</h2>
+            
+            <ul class="nav_ul nav_ul--extra">
+              <li>
+                <a >Wolt</a>
+              </li>
+              
+              <li>
+                <a >Foodpanda</a>
+              </li>
+              
+              <li>
+                <a >Netpincér</a>
+              </li>
+              
+              <li>
+                <a>?</a>
+              </li>
+              
+              <li>
+                <a>?</a>
+              </li>
+              
+              <li>
+                <a>?</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav_item">
+            <h2 class="nav_title">Legal</h2>
+            
+            <ul class="nav_ul">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="#">Terms of Use</a>
+              </li>
+              
+              <li>
+                <a href="terkep.html">Térkép</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>&copy; 2022 Minden jog fenntartva.</p>
+        
+        </div>
+      </footer>
+
+
+</body>
+
+</html>
