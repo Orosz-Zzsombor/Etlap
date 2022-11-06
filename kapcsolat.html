@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+
+
+</head>
+<body>
+  <script>
+    function myFunction2() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+
+    </script>
+<div class="coloring">
+    <div class="topnav" id="myTopnav">
+      <a href="#home"><span>TASTE.</span>IT</a>
+      <a href="index.html">Kezdőlap</a>
+      <a href="terkep.html">Térkép</a>
+      <a href="#elerhetoseg">Elérhetőségek</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+    <br>
+    <div class="container_kapcsolat">
+      <h3>Lépj velünk kapcsolatba</h3>
+        <form>
+          <ul class="flex-outer">
+            <li>
+              <label for="first-name">Családnév:</label>
+              <input type="text" id="first-name" placeholder="Írd be a családneved">
+            </li>
+            <li>
+              <label for="last-name">Keresztnév:</label>
+              <input type="text" id="last-name" placeholder="Írd be a keresztneved">
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <input type="email" id="email" placeholder="Írd be az email-ed">
+            </li>
+            <li>
+              <label for="phone">Telefon:</label>
+              <input type="tel" id="phone" placeholder="Írd be a telefonszámod">
+            </li>
+            <li>
+              <label for="message">Üzenet:</label>
+              <textarea rows="6" id="message" placeholder="Írd be az üzenetet"></textarea>
+            </li>
+            <li>
+              <button type="submit">Küldés</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="black_section">
+        <img id="vonal" src="Images/line1.png">
+    </div>
+    <footer class="footer">
+      <div class="footer_addr">
+      
+            
+        <h2>Contact</h2>
+        
+        <address>
+          5534 Somewhere In. The World 22193-10212<br>
+              
+          <a class="footer_btn" href="kapcsolat.html" id="elerhetoseg">Lépj velünk kapcsolatba</a>
+        </address>
+      </div>
+      
+      <ul class="footer_nav">
+        <li class="nav_item">
+          <h2 class="nav_title">Media</h2>
+    
+          <ul class="nav_ul">
+            <li>
+              <a >Facebook</a>
+            </li>
+    
+            <li>
+              <a >Instragram</a>
+            </li>
+                
+            <li>
+              <a>Twitter</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav_item nav_item--extra">
+          <h2 class="nav_title">Partnerek</h2>
+          
+          <ul class="nav_ul nav_ul--extra">
+            <li>
+              <a >?</a>
+            </li>
+            
+            <li>
+              <a >?</a>
+            </li>
+            
+            <li>
+              <a >?</a>
+            </li>
+            
+            <li>
+              <a>?</a>
+            </li>
+            
+            <li>
+              <a >?</a>
+            </li>
+            
+            <li>
+              <a>?</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav_item">
+          <h2 class="nav_title">Legal</h2>
+          
+          <ul class="nav_ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            
+            <li>
+              <a href="terkep.html">Térkép</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="legal">
+        <p>&copy; 2022 Minden jog fenntartva.</p>
+      
+      </div>
+    </footer>
+</body>
+</html>

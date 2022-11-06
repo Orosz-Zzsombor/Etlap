@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
     <title>Étterem</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="java.js"></script>
+
 
 
 </head>
 
 <body>
+
     <button onclick="topFunction()" id="myBtn" title="Go to top">UP</button>
     <script>
         let mybutton = document.getElementById("myBtn");
@@ -33,25 +32,45 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+        function myFunction2() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+            function focusFunction(id) {
+            document.getElementById(id).style.border = "5px solid rgb(243, 228, 17)";
+        }
+
+            function blurFunction(id) {
+                document.getElementById(id).style.border = "0px";
+        }
+
+
+        function swipe(id) {
+        var largeImage = document.getElementById(id);
+        var url=largeImage.getAttribute('src');
+        window.open(url,'Image','width=largeImage.stylewidth,height=largeImage.style.height,resizable=1');
+        
+}
     </script>
 
     <div class="header">
-        <div class="navbar">
-            <a id="first_nav_element" href="#"><span>Taste</span>.it</a>
+        <div class="topnav" id="myTopnav">
+            <a href="#home"><span id="taste_it">TASTE.</span>IT</a>
+            <a href="index.html">Kezdőlap</a>
             <a href="terkep.html">Térkép</a>
-            <a href="#">Elérhetőségek</a>
-            <a href="#">Rólunk</a>
-
-            <a><i class="fa fa-shopping-cart" style="font-size:20px"></i></a>
-            <a><i class="fa fa-moon-o" style="font-size:24px"></i></a>
-            <a><i class="fa fa-search" style="font-size:20px"></i></a><input type="text" class="kereso" name="search"
-                placeholder="Keresés..">
-
+            <a href="#elerhetoseg">Elérhetőségek</a>
+            <a href="kapcsolat.html">Kapcsolat</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
 
-        <br>
-        <img class="logo" src="Images/logo.png" onmouseover="this.src='Images/Logo2.png'" onmouseout="this.src='Images/logo.png'">
-        <h1>Étterem</h1>
+        <img class="logo" src="Images/logo.png">
+        <h1>Mustache Étterem</h1>
 
     </div>
 
@@ -71,122 +90,176 @@
             </div>
 
         </div>
+        <script>
+            function toggleText() {
+                var points =
+                    document.getElementById("points");
+                var showMoreText =
+                    document.getElementById("moreText");
 
-       <div class="main">
+                var buttonText =
+                    document.getElementById("textButton");
+                if (points.style.display === "none") {
+
+                    showMoreText.style.display = "none";
+
+                    points.style.display = "inline";
+
+                    buttonText.innerHTML = "Több Információ";
+                }
+                else {
+                    showMoreText.style.display = "inline";
+                    points.style.display = "none";
+                    buttonText.innerHTML = "Kevesebb információ";
+                }
+            }
+        </script>
+        <div class="main">
 
             <div class="sor_1">
                 <div class="oszlop">
-                    <img class="étel" src="Images/leves1.jpg">
+                 <img  id="leves1"  src="Images/leves1.jpg" style="width: 27rem; height: 16rem; " onclick="swipe('leves1')">
+                    <b>1400FT</b>
+                    <p>Sajtos pizza</p>
+                        <span id="points"></span>
+                        <span id="moreText"> Feltétek: sajt,sajtsajtsajtsajtsajt :)
+
+                        </span>
+                        <button  onclick="toggleText()"  onfocus="focusFunction('leves1')"
+                        onblur="blurFunction('leves1')"  id="textButton" class="button" > 
+                            Több Információ
+                        </button>
+                </div>
+                <div class="oszlop">
+                    <p></p>
+                </div>
+                <div class="oszlop">
+                   <img  id="leves2" src="Images/leves2.jpg" style="width: 27rem; height: 16rem; " onclick="swipe('leves2')">
+                    <b>1400FT</b>
+                    <p>Sajtos pizza</p>
+                    <span id="points"></span>
+                    <span id="moreText"> Feltétek: sajt,sajtsajtsajtsajtsajt :)
+
+                    </span>
+                    <button onclick="toggleText()" onfocus="focusFunction('leves2')"
+                    onblur="blurFunction('leves2')" id="textButton" class="button">
+                        Több Információ
+                    </button>
+                </div>
+                <div class="oszlop">
+                    <p></p>
+                </div>
+                <div class="oszlop">
+                 <img  id="leves3" src="Images/leves3.jpg" style="width: 27rem; height: 16rem;" onclick="swipe('leves3')">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
                 <div class="oszlop">
-                    <img class="étel" src="Images/leves2.jpg">
+                   <img  id="leves4" src="Images/leves4.jpg" style="width: 27rem; height: 16rem;" onclick="swipe('leves4')">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
                 <div class="oszlop">
-                    <img class="étel" src="Images/leves3.jpg">
+                <img  id="leves5" src="Images/leves5.jpg" style="width: 27rem; height: 16rem;" onclick="swipe('leves5')">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
-                </div>
-                <div class="oszlop">
-                    <img class="étel" src="Images/leves4.jpg">
-                    <button class="button">Kosárba</button>
-                </div>
-                <div class="oszlop">
-                    <p>1400FT</p>
-                </div>
-                <div class="oszlop">
-                    <img class="étel" src="Images/leves5.jpg">
-                    <button class="button">Kosárba</button>
-                </div>
-                <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
             </div>
 
 
             <div class="sor_2">
                 <div class="oszlop">
-                    <img class="étel" src="Images/főétel1.jpg">
+                    <img class="étel" src="Images/főétel1.jpg" style="width: 27rem; height: 16rem;">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
                 <div class="oszlop">
-                    <img class="étel" src="Images/főétel2.jpg">
+                    <img class="étel" src="Images/főétel2.jpg" style="width: 27rem; height: 16rem;">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
                 <div class="oszlop">
-                    <img class="étel" src="Images/főétel3.jpg">
+                    <img class="étel" src="Images/főétel3.jpg" style="width: 27rem; height: 16rem;">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
                 <div class="oszlop">
-                    <img class="étel" src="Images/főétel4.jpg">
+                    <img class="étel" src="Images/főétel4.jpg" style="width: 27rem; height: 16rem;">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
                 <div class="oszlop">
-                    <img class="étel" src="Images/főétel5.jpg">
+                    <img class="étel" src="Images/főétel5.jpg" style="width: 27rem; height: 16rem;">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
             </div>
 
 
             <div class="sor_3">
                 <div class="oszlop">
-                    <img class="étel" src="desszert/desszert1.jpg">
+                    <img class="étel" src="Images/desszert1.jpg" style="width: 27rem; height: 16rem;">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
                 <div class="oszlop">
-                    <img class="étel" src="desszert/desszert2.jpg">
+                    <img class="étel" src="Images/desszert2.jpg" style="width: 27rem; height: 16rem;">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
                 <div class="oszlop">
-                    <img class="étel" src="desszert/desszert3.jpg">
+                    <img class="étel" src="Images/desszert3.jpg" style="width: 27rem; height: 16rem;">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
                 <div class="oszlop">
-                    <img class="étel" src="desszert/desszert4.jpg">
+                    <img class="étel" src="Images/desszert4.jpg" style="width: 27rem; height: 16rem;">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
                 <div class="oszlop">
-                    <img class="étel" src="Images/desszert5.jpg">
+                    <img class="étel" src="Images/desszert5.jpg" style="width: 27rem; height: 16rem;">
+                    <b>1400FT</b>
                     <button class="button">Kosárba</button>
                 </div>
                 <div class="oszlop">
-                    <p>1400FT</p>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -249,42 +322,95 @@
 
     </div>
 
-
     <div class="black_section">
         <img id="vonal" src="Images/line1.png">
     </div>
-    <footer>
-
-        <div>
-            <h2 class="footer_headline">Navigation</h2>
-            <ul class="footer_list">
-                <li>nav 1</li>
-                <li>nav 2</li>
-                <li>nav 3</li>
-                <li>nav 4</li>
-                <li>nav 5</li>
-                <li>nav 6</li>
-                <li>nav 7</li>
-            </ul>
+    <footer class="footer">
+        <div class="footer_addr">
+        
+              
+          <h2>Contact</h2>
+          
+          <address>
+            5534 Somewhere In. The World 22193-10212<br>
+                
+            <a class="footer_btn" href="kapcsolat.html" id="elerhetoseg">Lépj velünk kapcsolatba</a>
+          </address>
         </div>
-        <div>
-            <h2 class="footer_headline">Follow Us</h2>
-            <ul class="footer_list">
-                <li>social 1 </li>
-                <li>social 2</li>
-                <li>social 3</li>
+        
+        <ul class="footer_nav">
+          <li class="nav_item">
+            <h2 class="nav_title" >Media</h2>
+      
+            <ul class="nav_ul">
+              <li>
+                <a >Facebook</a>
+              </li>
+      
+              <li>
+                <a >Instragram</a>
+              </li>
+                  
+              <li>
+                <a>Twitter</a>
+              </li>
             </ul>
-        </div>
-        <div>
-            <h2 class="footer_headline">Contact</h2>
-            <ul class="footer_list">
-                <li>Adress</li>
-                <li>Phone</li>
-                <li>Email</li>
-                <li>Website</li>
+          </li>
+          
+          <li class="nav_item nav_item--extra">
+            <h2 class="nav_title">Partnerek</h2>
+            
+            <ul class="nav_ul nav_ul--extra">
+              <li>
+                <a >Wolt</a>
+              </li>
+              
+              <li>
+                <a >Foodpanda</a>
+              </li>
+              
+              <li>
+                <a >Netpincér</a>
+              </li>
+              
+              <li>
+                <a>?</a>
+              </li>
+              
+              <li>
+                <a>?</a>
+              </li>
+              
+              <li>
+                <a>?</a>
+              </li>
             </ul>
+          </li>
+          
+          <li class="nav_item">
+            <h2 class="nav_title">Legal</h2>
+            
+            <ul class="nav_ul">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="#">Terms of Use</a>
+              </li>
+              
+              <li>
+                <a href="terkep.html">Térkép</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>&copy; 2022 Minden jog fenntartva.</p>
+        
         </div>
-    </footer>
+      </footer>
 </body>
 
 </html>
