@@ -69,7 +69,7 @@
             </a>
         </div>
 
-        <img class="logo" src="Images/logo.png" onmouseover="this.src='Images/Logo2.png'" onmouseout="this.src='Images/logo.png'">
+       <img class="logo" src="Images/logo.png" onmouseover="this.src='Images/Logo2.png'" onmouseout="this.src='Images/logo.png'">
         <h1>Mustache Étterem</h1>
 
     </div>
@@ -114,7 +114,7 @@
                 }
             }
         </script>
-        <div class="main">
+           <div class="main">
 
             <div class="sor_1">
                 <div class="oszlop">
@@ -207,7 +207,7 @@
 
             <div class="sor_2">
                 <div class="oszlop">
-                    <img id="foetel1" src="Images/főétel1.jpg" style="width: 27rem; height: 16rem;">
+                    <img id="foetel1" src="Images/főétel1.jpg" style="width: 27rem; height: 16rem;"  onclick="swipe('foetel1')">
                     <b>2000FT</b>
                     <p>Fish fillet</p>
                     <span id="points6"></span>
@@ -227,7 +227,7 @@
                     <p></p>
                 </div>
                 <div class="oszlop">
-                    <img id="foetel2"  src="Images/főétel2.jpg" style="width: 27rem; height: 16rem;">
+                    <img id="foetel2"  src="Images/főétel2.jpg" style="width: 27rem; height: 16rem; "  onclick="swipe('foetel2')">
                     <b>1800FT</b>
                     <p>Marhapörkölt</p>
                     <span id="points7"></span>
@@ -248,7 +248,7 @@
                     <p></p>
                 </div>
                 <div class="oszlop">
-                    <img id="foetel3" src="Images/főétel3.jpg" style="width: 27rem; height: 16rem;">
+                    <img id="foetel3" src="Images/főétel3.jpg" style="width: 27rem; height: 16rem;"  onclick="swipe('foetel3')">
                     <b>1550FT</b>
                     <p>Bécsi szelet</p>
                     <span id="points8"></span>
@@ -268,7 +268,7 @@
                     <p></p>
                 </div>
                 <div class="oszlop">
-                    <img id="foetel4" src="Images/főétel4.jpg" style="width: 27rem; height: 16rem;">
+                    <img id="foetel4" src="Images/főétel4.jpg" style="width: 27rem; height: 16rem;"  onclick="swipe('foetel4')">
                     <b>2100FT</b>
                     <p>Pizza</p>
                     <span id="points9"></span>
@@ -289,7 +289,7 @@
                     <p></p>
                 </div>
                 <div class="oszlop">
-                    <img id="foetel5" src="Images/főétel5.jpg" style="width: 27rem; height: 16rem;">
+                    <img id="foetel5" src="Images/főétel5.jpg" style="width: 27rem; height: 16rem;"  onclick="swipe('foetel5')">
                     <b>2500FT</b>
                     <p>Sült csirke</p>
                     <span id="points10"></span>
@@ -314,7 +314,7 @@
 
             <div class="sor_3">
                 <div class="oszlop">
-                    <img id="desszert1" src="desszert/desszert1.jpg" style="width: 27rem; height: 16rem;">
+                    <img id="desszert1" src="Images/desszert1.jpg" style="width: 27rem; height: 16rem;"  onclick="swipe('desszert1')">
                     <b>2000FT</b>
                     <p>Palacsinta</p>
                     <span id="points11"></span>
@@ -334,7 +334,7 @@
                     <p></p>
                 </div>
                 <div class="oszlop">
-                    <img id="desszert2" src="desszert/desszert2.jpg" style="width: 27rem; height: 16rem;">
+                    <img id="desszert2" src="Images/desszert2.jpg" style="width: 27rem; height: 16rem;"  onclick="swipe('desszert2')">
                     <b>1600FT</b>
                     <p>Tiramisu</p>
                     <span id="points12"></span>
@@ -350,7 +350,7 @@
                     <p></p>
                 </div>
                 <div class="oszlop">
-                    <img id="desszert3" src="desszert/desszert3.jpg" style="width: 27rem; height: 16rem;">
+                    <img id="desszert3" src="Images/desszert3.jpg" style="width: 27rem; height: 16rem;"  onclick="swipe('desszert3')">
                     <b>2200FT</b>
                     <p>Sajttorta</p>
                     <span id="points13"></span>
@@ -366,7 +366,7 @@
                     <p></p>
                 </div>
                 <div class="oszlop">
-                    <img id="desszert4" src="desszert/desszert4.jpg" style="width: 27rem; height: 16rem;">
+                    <img id="desszert4" src="Images/desszert4.jpg" style="width: 27rem; height: 16rem;"  onclick="swipe('desszert4')">
                     <b>1850FT</b>
                     <p>Mákos guba</p>
                     <span id="points14"></span>
@@ -382,7 +382,7 @@
                     <p></p>
                 </div>
                 <div class="oszlop">
-                    <img id="desszert5" src="Images/desszert5.jpg" style="width: 27rem; height: 16rem;">
+                    <img id="desszert5" src="Images/desszert5.jpg" style="width: 27rem; height: 16rem;"  onclick="swipe('desszert5')">
                     <b>1900FT</b>
                     <p>Gesztenyepüré</p>
                     <span id="points15"></span>
@@ -402,53 +402,90 @@
     </div>
 
 
-
-
+<div>
     <div class="napi_menu">
 
-        <h2 style="text-align:center">Napi Menük</h2>
+        <h2 style="text-align:center" id="napi_menu_cim">Napi Menük</h2>
         <div class="row2">
             <div class="column">
                 <div class="card">
-                    <img src="Images/menukaja1.jpg" style="width:100%">
+                    <img src="Images/menukaja1.jpg" style="width:100%;">
                     <div class="container">
                         <h2>Menü|1</h2>
                         <p class="title_card">1200FT</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates ipsum enim culpa
-                            nulla est nihil aliquid veniam, aut reprehenderit, adipisci minus, unde ducimus sed! Aut,
-                            quam impedit! Vel, culpa. .</p>
+
                         <p>stigibalint@gmail.com</p>
-                        <p><button class="button">Kosárba</button></p>
+
                     </div>
                 </div>
             </div>
 
             <div class="column">
                 <div class="card">
-                    <img src="Images/menukaja1.jpg" style="width:100%">
+                    <img src="Images/menukaja2.jpg" style="width:100%;">
                     <div class="container">
                         <h2>Menü|2</h2>
                         <p class="title_card">1600FT</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates ipsum enim culpa
-                            nulla est nihil aliquid veniam, aut reprehenderit, adipisci minus, unde ducimus sed! Aut,
-                            quam impedit! Vel, culpa. </p>
+
                         <p>stigibalint@gmail.com</p>
-                        <p><button class="button">Kosárba</button></p>
+
                     </div>
                 </div>
             </div>
 
             <div class="column">
                 <div class="card">
-                    <img src="Images/menukaja1.jpg" style="width:100%">
+                    <img src="Images/napikaja3.jpg"style="width:100%;">
                     <div class="container">
                         <h2>Menü|3</h2>
                         <p class="title_card">1900FT</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates ipsum enim culpa
-                            nulla est nihil aliquid veniam, aut reprehenderit, adipisci minus, unde ducimus sed! Aut,
-                            quam impedit! Vel, culpa. .</p>
+
                         <p>stigibalint@gmail.com</p>
-                        <p><button class="button">Kosárba</button></p>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </p>
+    </div>
+
+    <div class="italok">
+        <h2 style="text-align:center" id="napi_menu_cim">Italkínálat</h2>
+        <div class="row2">
+            <div class="column">
+                <div class="card">
+                    <img src="Images/menukaja1.jpg"style="width:100%;">
+                    <div class="container">
+                        <h2>Kóla|1</h2>
+                        <p class="title_card">600FT</p>
+
+                        <p>stigibalint@gmail.com</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="Images/menukaja1.jpg"style="width:100%;">
+                    <div class="container">
+                        <h2>Fanta|2</h2>
+                        <p class="title_card">600FT</p>
+
+                        <p>stigibalint@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="Images/menukaja1.jpg" style="width:100%;">
+                    <div class="container">
+                        <h2>Jhin|3</h2>
+                        <p class="title_card">900FT</p>
+
+                        <p>stigibalint@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -457,6 +494,8 @@
         </p>
 
     </div>
+
+</div>
 
     <div class="black_section">
         <img id="vonal" src="Images/line1.png">
