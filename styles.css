@@ -183,6 +183,12 @@ h1 {
 
 .logo {
   width: 15rem;
+  transition: transform .5s;
+}
+
+
+.logo:hover{
+  transform: scale(1.1);
 }
 
 #moreText1,
