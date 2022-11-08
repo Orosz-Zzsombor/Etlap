@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>foglalas</title>
     <script src="java.js"></script>
 
 
 </head>
 <body>
+  
 <div class="coloring">
     <div class="topnav" id="myTopnav">
       <a href="#home"><span id="taste_it">TASTE.</span>IT</a>
@@ -26,31 +27,47 @@
   </div>
     <br>
     <div class="container_kapcsolat">
-      <h3>Lépj velünk kapcsolatba</h3>
+      <h3>Foglalás</h3>
         <form>
           <ul class="flex-outer">
             <li>
-              <label for="first-name">Családnév:</label>
-              <input type="text" id="first-name" placeholder="Írd be a családneved">
+              <label for="first-name">Név:</label>
+              <input type="text" id="first-name" placeholder="Írd be a neved">
             </li>
             <li>
-              <label for="last-name">Keresztnév:</label>
-              <input type="text" id="last-name" placeholder="Írd be a keresztneved">
+              <label for="email">Dátum:</label>
+              <input type="date" id="start" name="trip-start" value="2022-11-10" min="2022-11-10" max="2023-11-10">
             </li>
             <li>
-              <label for="email">Email:</label>
-              <input type="email" id="email" placeholder="Írd be az email-ed">
+                <label for="idotartam">Időtartam:</label>
+                <select type="idotartam" id="idotartam"  style="height: 3.5em;">
+                    <option selected value="1:00">1 óra</option>
+                    <option value="1:30">1,5 óra</option>
+                    <option value="2:00">2 óra</option>
+                    <option value="2:30">2,5 óra</option>
+                    <option value="3:00">3 óra</option>
+                </select>
+            </li>
+            <li>
+                <label for="idopont">Időpont:</label>
+                <select type="idopont" id="idopont" style="height: 3.5em;">
+                    <option selected value="11:00">11 óra</option>
+                    <option value="12:00">12 óra</option>
+                    <option value="13:00">13 óra</option>
+                    <option value="14:00">14 óra</option>
+                    <option value="15:00">15 óra</option>
+                </select>
             </li>
             <li>
               <label for="phone">Telefon:</label>
-              <input type="tel" id="phone" placeholder="Írd be a telefonszámod">
+              <input type="tel" id="phone" value="+36" >
             </li>
             <li>
-              <label for="message">Üzenet:</label>
-              <textarea rows="6" id="message" placeholder="Írd be az üzenetet"></textarea>
+              <label for="message">Megjegyzés:</label>
+              <textarea rows="6" id="message" placeholder="Írd be a megjegyzésed (nem kötelező)"></textarea>
             </li>
             <li>
-              <button type="submit">Küldés</button>
+              <button type="submit">Foglalás</button>
             </li>
           </ul>
         </form>
@@ -129,7 +146,7 @@
             </li>
             
             <li>
-              <a href="#">Terms of Use</a>
+              <a href="tos.html">Terms of Use</a>
             </li>
             
             <li>
