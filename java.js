@@ -9,7 +9,7 @@ function navBar() {
 }
 
 
-function swipe(id) {
+function OpenUp(id) {
     var largeImage = document.getElementById(id);
     var url = largeImage.getAttribute('src');
     window.open(url, 'Image', 'width=largeImage.stylewidth,height=largeImage.style.height,resizable=1');

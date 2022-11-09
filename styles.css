@@ -670,7 +670,11 @@ td, th {
 
 .map-flex{
   max-width: 50rem;
- 
+  margin:auto;
+}
+
+table{
+  margin: auto;
 }
 /*TOS*/
 .terms{
@@ -684,4 +688,10 @@ td, th {
   background-color: #262626;
 }
 
+td{
+  border: none;
+}
 
+.etel_ar{
+  text-align: center;
+}
