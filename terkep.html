@@ -2,191 +2,192 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <title>Terkep</title>
-    <script src="java.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <title>Terkep</title>
+  <script src="java.js"></script>
 </head>
 
 <body>
   <button onclick="topFunction()" id="myBtn" title="Go to top">UP</button>
   <script>
-      let mybutton = document.getElementById("myBtn");
-      window.onscroll = function () { scrollFunction() };
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
 
-      function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              mybutton.style.display = "block";
-          } else {
-              mybutton.style.display = "none";
-          }
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
       }
+    }
 
-      function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-      }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
 
   </script>
 
 
-    <div class="header">
-        <div class="topnav" id="myTopnav">
-            <a href="#home"><span id="taste_it">TASTE.</span>IT</a>
-            <a href="index.html">Kezdőlap</a>
-            <a href="terkep.html">Térkép</a>
-            <a href="#elerhetoseg">Elérhetőségek</a>
-            <a href="kapcsolat.html">Kapcsolat</a>
-            <a href="javascript:void(0);" class="icon" onclick="navBar()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-        <h1>Térkép</h1>
-        <div class="flex-container">
-            <div class="flex-child mapouter">
-                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" title="terkep"
-                        src="https://maps.google.com/maps?q=hiroshima&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                        scrolling="no" marginheight="" marginwidth="0"></iframe>
-                </div>
-            </div>
-            <div class="flex-child" style="overflow-x:auto;" >
-                <table >
-                    <tr>
-                      <th colspan="2">Nyitvatartás</th>
+  <div class="header">
+    <div class="topnav" id="myTopnav">
+      <a href="#home"><span id="taste_it">TASTE.</span>IT</a>
+      <a href="index.html">Kezdőlap</a>
+      <a href="terkep.html">Térkép</a>
+      <a href="#elerhetoseg">Elérhetőségek</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
+      <a href="javascript:void(0);" class="icon" onclick="navBar()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <h1>Térkép</h1>
+    <div class="map-flex">
+      <iframe class="googlemap"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5387.9797360534385!2d21.63020072861666!3d47.52906026101221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47470fddf49a8b35%3A0x2457e4d1ff2b811d!2sFreedom%20Sky%20Bar%20and%20Restaurant!5e0!3m2!1shu!2shu!4v1668011097662!5m2!1shu!2shu"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="flex-child">
+      <table>
+        <tr>
+          <th colspan="2">Nyitvatartás</th>
 
+        </tr>
+        <tr>
+          <td>Hétfő:</td>
+          <td>11:00-19:00</td>
+        </tr>
+        <tr>
+          <td>Kedd:</td>
+          <td>11:00-19:00</td>
+        </tr>
+        <tr>
+          <td>Szerda:</td>
+          <td>11:00-19:00</td>
+        </tr>
+        <tr>
+          <td>Csütörtök:</td>
+          <td>11:00-19:00</td>
+        </tr>
+        <tr>
+          <td>Péntek:</td>
+          <td>11:00-19:00</td>
+        </tr>
+        <tr>
+          <td>Szombat:</td>
+          <td>11:00-19:00</td>
+        </tr>
+        <tr>
+          <td>Vasárnap:</td>
+          <td>11:00-19:00</td>
+        </tr>
+        <tr>
+          <td colspan="2"><a href="asztal.html"><button class="green_btn">Asztalfoglalás</button></a></td>
 
-                    </tr>
-                    <tr>
-                         <td>Hétfő:</td>
-                         <td>11:00-15:00</td>
-                    </tr>
-                    <tr>
-                        <td>Kedd:</td>
-                        <td>11:00-15:00</td>
-                    </tr>
-                    <tr>
-                        <td>Szerda:</td>
-                        <td>11:00-15:00</td>
-                    </tr>
-                    <tr>
-                        <td>Csütörtök:</td>
-                        <td>11:00-15:00</td>
-                    </tr>
-                    <tr>
-                        <td>Péntek:</td>
-                        <td>11:00-15:00</td>
-                    </tr>
-                    <tr>
-                        <td>Szombat:</td>
-                        <td>11:00-15:00</td>
-                    </tr>
-                    <tr>
-                        <td>Vasárnap:</td>
-                        <td>11:00-15:00</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><a href="asztal.html"><button class="green_btn">Asztalfoglalás</button></a></td>
-
-                    </tr>
-                  </table>
-
-            </div>
-                
-        </div>
-        
+        </tr>
+      </table>
 
     </div>
-    <footer class="footer">
-        <div class="footer_addr">
-        
-              
-          <h2>Contact</h2>
-          
-          <address>
-            5534 Somewhere In. The World 22193-10212<br>
-                
-            <a class="footer_btn" href="kapcsolat.html" id="elerhetoseg">Lépj velünk kapcsolatba</a>
-          </address>
-        </div>
-        
-        <ul class="footer_nav">
-          <li class="nav_item">
-            <h2 class="nav_title" >Media</h2>
-      
-            <ul class="nav_ul">
-              <li>
-                <a >Facebook</a>
-              </li>
-      
-              <li>
-                <a >Instragram</a>
-              </li>
-                  
-              <li>
-                <a>Twitter</a>
-              </li>
-            </ul>
+
+  </div>
+
+
+  </div>
+  <div class="black_section">
+    <img id="vonal" src="Images/line1.png">
+  </div>
+  <footer class="footer">
+    <div class="footer_addr">
+
+
+      <h2>Contact</h2>
+
+      <address>
+        4024 Debrecen, Kossuth utca 55.<br>
+
+        <a class="footer_btn" href="kapcsolat.html" id="elerhetoseg">Lépj velünk kapcsolatba</a>
+        <p>Telefonszám:
+          +36 52 422 224 • +36 52 477 700</p>
+
+        <p><a href="terkep.html">Térkép</a></p>
+
+      </address>
+    </div>
+
+    <ul class="footer_nav">
+      <li class="nav_item">
+        <h2 class="nav_title">Media</h2>
+
+        <ul class="nav_ul">
+          <li>
+            <a>Facebook</a>
           </li>
-          
-          <li class="nav_item nav_item--extra">
-            <h2 class="nav_title">Partnerek</h2>
-            
-            <ul class="nav_ul nav_ul--extra">
-              <li>
-                <a >Wolt</a>
-              </li>
-              
-              <li>
-                <a >Foodpanda</a>
-              </li>
-              
-              <li>
-                <a >Netpincér</a>
-              </li>
-              
-              <li>
-                <a>?</a>
-              </li>
-              
-              <li>
-                <a>?</a>
-              </li>
-              
-              <li>
-                <a>?</a>
-              </li>
-            </ul>
+
+          <li>
+            <a>Instragram</a>
           </li>
-          
-          <li class="nav_item">
-            <h2 class="nav_title">Legal</h2>
-            
-            <ul class="nav_ul">
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              
-              <li>
-                <a href="tos.html">Terms of Use</a>
-              </li>
-              
-              <li>
-                <a href="terkep.html">Térkép</a>
-              </li>
-            </ul>
+
+          <li>
+            <a>Twitter</a>
           </li>
         </ul>
-        
-        <div class="legal">
-          <p>&copy; 2022 Minden jog fenntartva.</p>
-        
-        </div>
-      </footer>
+      </li>
+
+      <li class="nav_item nav_item--extra">
+        <h2 class="nav_title">Partnerek</h2>
+
+        <ul class="nav_ul nav_ul--extra">
+          <li>
+            <a>Wolt</a>
+          </li>
+
+          <li>
+            <a>Foodpanda</a>
+          </li>
+
+          <li>
+            <a>Netpincér</a>
+          </li>
+
+          <li>
+            <a>Rakun</a>
+          </li>
+
+          <li>
+            <a>Ordit</a>
+          </li>
+
+
+        </ul>
+      </li>
+
+      <li class="nav_item">
+        <h2 class="nav_title">Legal</h2>
+
+        <ul class="nav_ul">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="tos.html">Terms of Use</a>
+          </li>
+
+
+        </ul>
+      </li>
+    </ul>
+
+    <div class="legal">
+      <p>&copy Copyright 2022 | Mustache Restaurant </p>
+    </div>
+  </footer>
 
 
 </body>

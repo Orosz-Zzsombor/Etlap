@@ -64,7 +64,7 @@ h1 {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 890px) {
   .topnav a:not(:first-child) {
     display: none;
   }
@@ -76,7 +76,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 890px) {
   .topnav.responsive {
     position: relative;
   }
@@ -376,7 +376,7 @@ h2 {
 
 .black_section {
   display: flex;
-  margin-top: 3rem;
+
   background-color: #262626;
   width: 100%;
 }
@@ -428,6 +428,10 @@ h2 {
 
 .footer a {
   text-decoration: none;
+  
+}
+.footer p a{
+  color: #999;
 }
 
 .footer li {
@@ -600,27 +604,6 @@ h3 {
   color: rgb(214, 177, 14);
 }
 
-
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 500px;
-  width: 900px;
-  margin-left:20%;
-}
-
-
-.mapouter {
-  text-align: left;
-  height: 500px;
-  width: 600px;
-
-}
-.flex-container {
-  display: flex;
- 
-
-}
 .flex-child {
   flex: 1;
 
@@ -629,9 +612,10 @@ h3 {
 
 table {  
   width: 100%;
-  height: 90%;
+ 
   border-collapse: collapse; 
-  
+  max-width: 50rem;
+
 }
 
 tr:nth-of-type(odd) { 
@@ -649,6 +633,9 @@ th {
 td, th { 
   padding: 6px; 
   border: 1px solid #ccc;  
+ 
+
+  
 }
 .green_btn{
   background-color: #4CAF50;
@@ -660,6 +647,11 @@ td, th {
   display: inline-block;
   font-size: 16px;
 }
+.green_btn:hover{
+  font-size: 19px;
+  transition: 0.5s;
+  padding: 17px 33px;
+}
 
 
 @media screen and (max-width: 670px) {
@@ -668,7 +660,18 @@ td, th {
   }
 }
 
+.googlemap{
+  width: 100%;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
 
+.map-flex{
+  max-width: 50rem;
+ 
+}
 /*TOS*/
 .terms{
   font-size: larger;
@@ -681,6 +684,4 @@ td, th {
   background-color: #262626;
 }
 
-.kivalasztott{
-  border: 2px solid yellow;
-}
+
